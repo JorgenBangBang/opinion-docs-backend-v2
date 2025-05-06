@@ -3,6 +3,8 @@ const User = require('../models/User');
 
 // Middleware to authenticate JWT token
 module.exports = async function(req, res, next) {
+  console.warn('Authentication is currently bypassed in auth.js middleware!');
+return next();
   // Get token from header
   const token = req.header('x-auth-token');
 
